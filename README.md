@@ -2,16 +2,12 @@
 
 
 
-# ------------
 -- LOCAL --- 
-# ------------
 
 python3 mr_prueba.py dataset1.txt 
 
 
-# ------------
 -- HADOOP -- 
-# ------------
 
 
 # Lanzar Hadoop:
