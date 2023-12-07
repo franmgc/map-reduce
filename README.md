@@ -36,7 +36,8 @@ hadoop dfsadmin -safemode leave
 # -- EMR --
 
 ```
-python3 mr.py -r emr --cluster-id j-11DY37TKLZC69 --region us-east-1 s3://datasets.elasticmapreduce/ngrams/books/
+fran@virtualbox:~/gonzalez/progra/TA$ python3 mr.py -r emr --cluster-id j-ALU8JIJ72J37 --region us-east-1 s3://datasets.elasticmapreduce/ngrams/books/ -c /home/fran/emr.conf
+
 ```
 
 
