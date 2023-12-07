@@ -36,6 +36,10 @@ hadoop dfsadmin -safemode leave
 # -- EMR --
 
 ```
+# crear un cluster
+mrjob create-cluster -c emr.conf
+
+# ejecutar en el cluster
 fran@virtualbox:~/gonzalez/progra/TA$ python3 mr.py -r emr --cluster-id j-ALU8JIJ72J37 --region us-east-1 s3://datasets.elasticmapreduce/ngrams/books/ -c /home/fran/emr.conf
 
 ```
