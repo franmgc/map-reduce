@@ -1,6 +1,6 @@
 # -- LOCAL --- 
 
-python3 mr_prueba.py dataset1.txt 
+python3 mr.py dataset.csv 
 
 
 
