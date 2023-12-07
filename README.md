@@ -1,16 +1,12 @@
-# map-reduce
-
-
-
--- LOCAL --- 
+# -- LOCAL --- 
 
 python3 mr_prueba.py dataset1.txt 
 
 
--- HADOOP -- 
 
 
-# Lanzar Hadoop:
+
+# -- HADOOP -- 
 
 hdfs namenode -format
 
