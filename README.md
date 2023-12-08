@@ -44,5 +44,11 @@ fran@virtualbox:~/gonzalez/progra/TA$ python3 mr.py -r emr --cluster-id j-ALU8JI
 
 ```
 
+Mejor manera:
 
+```
+fran@virtualbox:~$ mrjob create-cluster -c emr.conf
+fran@virtualbox:~/gonzalez/progra/TA$ python3 mr.py -r emr s3://dataset-ngrams/data/ --cluster-id j-3RL4Y839W1TVG --region us-east-1
+
+```
 
