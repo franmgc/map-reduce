@@ -3,6 +3,8 @@ from mrjob.step import MRStep
 import sys
 import heapq
 
+import re
+
 class top_unigramas(MRJob):
   def steps(self):
     return [
@@ -12,7 +14,9 @@ class top_unigramas(MRJob):
                 reducer=self.reducer2)
       ]
 
-
+  def fit_regex(self, word):
+    return re.match(r"^(?!-)[A-Za-z+'-]+$", word)
+  
   def mapper1(self, _, line):
 
     # palabra     año         apariciones     num_libros
@@ -24,6 +28,7 @@ class top_unigramas(MRJob):
 
     decada = (anho // 10) * 10
     if 1950 <= decada <= 2010:
+      if self.fit_regex(palabra):
         yield ((decada, palabra), apariciones)
 
   def reducer1(self, decada_palabra, apariciones):
@@ -42,10 +47,10 @@ class top_unigramas(MRJob):
     top_5_words = heapq.nlargest(5, palabra_apariciones, key=lambda x: (x[1], x[0]))        # el top 5
 
     # Sort the top words alphabetically in case of ties
-    sorted_top_5_words = sorted(top_5_words, key=lambda x: x[0])                            #orden alfabético
+    # sorted_top_5_words = sorted(top_5_words, key=lambda x: x[0])                            #orden alfabético
 
     # yield the result
-    yield (decada, sorted_top_5_words)
+    yield (decada, top_5_words)
 
 if __name__ == '__main__':
     top_unigramas.run()
