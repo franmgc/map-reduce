@@ -1,0 +1,208 @@
+fran@virtualbox:~/gonzalez/progra/TA$ python3 mr.py -r emr --cluster-id j-1E222GETG6C9S --region us-east-1 s3://dataset-ngrams/data/googlebooks-eng-all-1gram-20090715-0.csv
+No configs found; falling back on auto-configuration
+No configs specified for emr runner
+Using s3://mrjob-195cbb1ce111e940/tmp/ as our temp dir on S3
+Creating temp directory /tmp/mr.fran.20231208.193157.173289
+uploading working dir files to s3://mrjob-195cbb1ce111e940/tmp/mr.fran.20231208.193157.173289/files/wd...
+Copying other local files to s3://mrjob-195cbb1ce111e940/tmp/mr.fran.20231208.193157.173289/files/
+Adding our job to existing cluster j-1E222GETG6C9S
+  master node is ec2-54-167-93-77.compute-1.amazonaws.com
+Waiting for Step 1 of 2 (s-03611462E5Y3NBGS05S3) to complete...
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  PENDING (cluster is RUNNING: Running step)
+  RUNNING for 0:00:18
+  RUNNING for 0:00:48
+  RUNNING for 0:01:19
+  RUNNING for 0:01:50
+  RUNNING for 0:02:20
+  RUNNING for 0:02:51
+  RUNNING for 0:03:21
+  COMPLETED
+Attempting to fetch counters from logs...
+Waiting 10 minutes for logs to transfer to S3... (ctrl-c to skip)
+
+To fetch logs immediately next time, set up SSH. See:
+https://pythonhosted.org/mrjob/guides/emr-quickstart.html#configuring-ssh-credentials
+
+Looking for step log in s3://aws-logs-621668821568-us-east-1/elasticmapreduce/j-1E222GETG6C9S/steps/s-03611462E5Y3NBGS05S3...
+  Parsing step log: s3://aws-logs-621668821568-us-east-1/elasticmapreduce/j-1E222GETG6C9S/steps/s-03611462E5Y3NBGS05S3/syslog.gz
+Counters: 55
+	File Input Format Counters 
+		Bytes Read=968490224
+	File Output Format Counters 
+		Bytes Written=76829935
+	File System Counters
+		FILE: Number of bytes read=127963956
+		FILE: Number of bytes written=266555273
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4680
+		HDFS: Number of bytes written=76829935
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=137
+		HDFS: Number of write operations=38
+		S3: Number of bytes read=968490224
+		S3: Number of bytes written=0
+		S3: Number of large read operations=0
+		S3: Number of read operations=0
+		S3: Number of write operations=0
+	Job Counters 
+		Data-local map tasks=40
+		Killed map tasks=2
+		Launched map tasks=40
+		Launched reduce tasks=19
+		Total megabyte-milliseconds taken by all map tasks=6169387680
+		Total megabyte-milliseconds taken by all reduce tasks=3191428800
+		Total time spent by all map tasks (ms)=4284297
+		Total time spent by all maps in occupied slots (ms)=192793365
+		Total time spent by all reduce tasks (ms)=1108135
+		Total time spent by all reduces in occupied slots (ms)=99732150
+		Total vcore-milliseconds taken by all map tasks=4284297
+		Total vcore-milliseconds taken by all reduce tasks=1108135
+	Map-Reduce Framework
+		CPU time spent (ms)=2458940
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=30265
+		Input split bytes=4680
+		Map input records=47323010
+		Map output bytes=453971202
+		Map output materialized bytes=128328451
+		Map output records=21086081
+		Merged Map outputs=760
+		Physical memory (bytes) snapshot=30663778304
+		Reduce input groups=3482878
+		Reduce input records=21086081
+		Reduce output records=3482878
+		Reduce shuffle bytes=128328451
+		Shuffled Maps =760
+		Spilled Records=42172162
+		Total committed heap usage (bytes)=28656533504
+		Virtual memory (bytes) snapshot=213913477120
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+Waiting for Step 2 of 2 (s-0635884OMU1ONQNCR6D) to complete...
+  RUNNING for 0:00:10
+  RUNNING for 0:00:40
+  RUNNING for 0:01:11
+  RUNNING for 0:01:42
+  RUNNING for 0:02:12
+  COMPLETED
+Attempting to fetch counters from logs...
+Waiting 10 minutes for logs to transfer to S3... (ctrl-c to skip)
+
+To fetch logs immediately next time, set up SSH. See:
+https://pythonhosted.org/mrjob/guides/emr-quickstart.html#configuring-ssh-credentials
+
+Looking for step log in s3://aws-logs-621668821568-us-east-1/elasticmapreduce/j-1E222GETG6C9S/steps/s-0635884OMU1ONQNCR6D...
+  Parsing step log: s3://aws-logs-621668821568-us-east-1/elasticmapreduce/j-1E222GETG6C9S/steps/s-0635884OMU1ONQNCR6D/syslog.gz
+Counters: 57
+	File Input Format Counters 
+		Bytes Read=78367683
+	File Output Format Counters 
+		Bytes Written=631
+	File System Counters
+		FILE: Number of bytes read=42094750
+		FILE: Number of bytes written=96730861
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=78376216
+		HDFS: Number of bytes written=0
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=106
+		HDFS: Number of write operations=0
+		S3: Number of bytes read=0
+		S3: Number of bytes written=631
+		S3: Number of large read operations=0
+		S3: Number of read operations=0
+		S3: Number of write operations=0
+	Job Counters 
+		Data-local map tasks=12
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=53
+		Launched reduce tasks=20
+		Rack-local map tasks=41
+		Total megabyte-milliseconds taken by all map tasks=1892977920
+		Total megabyte-milliseconds taken by all reduce tasks=1527762240
+		Total time spent by all map tasks (ms)=1314568
+		Total time spent by all maps in occupied slots (ms)=59155560
+		Total time spent by all reduce tasks (ms)=530473
+		Total time spent by all reduces in occupied slots (ms)=47742570
+		Total vcore-milliseconds taken by all map tasks=1314568
+		Total vcore-milliseconds taken by all reduce tasks=530473
+	Map-Reduce Framework
+		CPU time spent (ms)=310570
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=29701
+		Input split bytes=8533
+		Map input records=3482878
+		Map output bytes=76829935
+		Map output materialized bytes=42112090
+		Map output records=3482878
+		Merged Map outputs=1007
+		Physical memory (bytes) snapshot=39534989312
+		Reduce input groups=6
+		Reduce input records=3482878
+		Reduce output records=6
+		Reduce shuffle bytes=42112090
+		Shuffled Maps =1007
+		Spilled Records=6965756
+		Total committed heap usage (bytes)=38083756032
+		Virtual memory (bytes) snapshot=256251883520
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+job output is in s3://mrjob-195cbb1ce111e940/tmp/mr.fran.20231208.193157.173289/output/
+Streaming final output from s3://mrjob-195cbb1ce111e940/tmp/mr.fran.20231208.193157.173289/output/...
+1970	[["of", 1075342531], ["and", 717866846], ["to", 607895333], ["was", 175964702], ["his", 101167440]]
+1990	[["of", 1693679201], ["and", 1251884548], ["to", 1039220238], ["was", 266927708], ["his", 142738229]]
+2000	[["of", 2865208422], ["and", 2318823444], ["to", 1986679192], ["was", 544901756], ["his", 324443122]]
+1960	[["of", 984656547], ["and", 633922275], ["to", 548299029], ["was", 168754188], ["his", 103486278]]
+1980	[["of", 1193149018], ["and", 835133207], ["to", 698680051], ["was", 190218121], ["his", 101452152]]
+1950	[["of", 563364316], ["and", 366090539], ["to", 318764131], ["was", 102279671], ["his", 62184123]]
+Removing s3 temp directory s3://mrjob-195cbb1ce111e940/tmp/mr.fran.20231208.193157.173289/...
+Removing temp directory /tmp/mr.fran.20231208.193157.173289...
+fran@virtualbox:~/gonzalez/progra/TA$ #4 cores
+fran@virtualbox:~/gonzalez/progra/TA$ 
